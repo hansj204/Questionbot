@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Kotlin.SignUp"
+    android:gravity="center"
+    android:background="#ECE7F5"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGO"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/logId"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/signId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:hint="ID"
+            android:singleLine="true"
+            android:lines="1"
+            android:paddingRight="280dp"
+            android:textColorHint="#706E6E"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <EditText
+            android:id="@+id/signPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="PASSWORD"
+            android:singleLine="true"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:paddingRight="204dp"
+            android:textColorHint="#706E6E"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signId" />
+
+        <EditText
+            android:id="@+id/signPasswordConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="PASSWORD CONFIRM"
+            android:singleLine="true"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:paddingRight="124dp"
+            android:textColorHint="#706E6E"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signPassword" />
+
+        <EditText
+            android:id="@+id/signUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="USERNAME"
+            android:singleLine="true"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:paddingRight="204dp"
+            android:textColorHint="#706E6E"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signPasswordConfirm" />
+
+
+        <CheckBox
+            android:id="@+id/privateinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개인정보 수집 동의"
+            app:layout_constraintTop_toBottomOf="@id/signUserName"
+            app:layout_constraintLeft_toLeftOf="@id/signUserName"
+            android:layout_marginTop="30dp"
+            />
+
+        <CheckBox
+            android:id="@+id/locationinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/privateinfo"
+            app:layout_constraintLeft_toLeftOf="@id/privateinfo"
+            android:text="위치 정보 동의"
+            />
+
+        <CheckBox
+            android:id="@+id/camerainfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/locationinfo"
+            app:layout_constraintLeft_toLeftOf="@id/locationinfo"
+            android:text="카메라 접근 동의"
+            />
+
+
+        <Button
+            android:id="@+id/signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundsquare"
+            android:text="SIGN UP"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="140dp"
+            android:paddingRight="140dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/camerainfo"
+            />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
